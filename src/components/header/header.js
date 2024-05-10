@@ -1,12 +1,12 @@
 import React from "react";
-import { styledHeader } from "./styled";
+import { StyledHeader } from "./styled";
 
 export const Head = () => {
-    return(
+    return (
         <>
-            <styledHeader>
+            <StyledHeader>
                 <div>League of Legends Champions</div>
-            </styledHeader> 
+            </StyledHeader>
         </>
     )
 }
