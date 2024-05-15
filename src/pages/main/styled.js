@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 
-export const styledMain = styled.div`
-display: flex
+export const StyledMain = styled.div`
+    display: flex;
+    gap: 15px;
+    padding-top: 0.3%;
 `

@@ -60,28 +60,8 @@ export const Info = () => {
       console.log(e);
     }
   };
-
-  // apirequest
-  // const apirequest2 = async () => { // api 연결
-
-  // if (championId) {//championId가 있으면 api 요청
-  //             const response2 = await axios.get(`https://ddragon.leagueoflegends.com/cdn/13.23.1/data/ko_KR/champion/${championId}.json`);// api요청
-  //     try {
-  //         setChampionInfo(response2.data.data[championId].blurb);// 챔피언 정보를 저장.
-  //         console.log(championInfo);// 챔피언 정보 콘솔창 출력
-
-  //     } catch (e) {
-  //         console.log(e);
-  //     }
-
-  //     } else {
-  //         console.log(`데이터를 찾을 수 없습니다.`);
-  // }
-  // apirequest2
-
-  // 챔피언에 대한 정보를 출력
   return (
-    <Container>
+    <Container style={{backgroundColor: "#000000"}}>
       <Button onClick={apirequest}>Champion</Button>
       <LayOut>
         <img

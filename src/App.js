@@ -3,6 +3,7 @@ import { Navigate, Route, BrowserRouter as Router, Routes } from "react-router-d
 import { Head } from './components/header/header';
 import { Main } from './pages/main/main';
 import { Info } from './pages/information/info';
+import { Important } from './pages/important/important';
 
 
 function App() {
@@ -11,10 +12,11 @@ function App() {
       <Head/>
         <Routes>
           <Route exact path='/' element={<Navigate to ="/main" /> } />
-          <Route exact path='main' element={<Main/>}></Route>
-          <Route exact path='info' element={<Info/>}></Route>
+          <Route exact path='/main' element={<Main/>}></Route>
+          <Route exact path='/info' element={<Info/>}></Route>
+          <Route exact path='/important' element={<Important/>}></Route>
         </Routes>
-    </Router>
+    </Router>   
   );
 }
 

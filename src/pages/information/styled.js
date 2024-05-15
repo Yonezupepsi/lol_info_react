@@ -19,8 +19,9 @@ export const InfoBox = styled.div`
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-center;
+    align-items: center;
     gap:40px;
+    color: white;
 `;
 
 export const HorizontalBox = styled.div`
@@ -45,12 +46,12 @@ export const Button = styled.div`
   font-size: 25px;
   font-weight: bold;
   border-radius: 15px;
-  background-color: black;
-  color: white;
+  background-color: #c9c9c9;
+  color: black;
   cursor: pointer;
   padding: 10px 30px;
   &:hover {
-    background-color: #c9c9c9;
+    background-color: #FFFF00;
     color: black;
   }
   margin: 30px;
