@@ -4,6 +4,7 @@ import { Head } from './components/header/header';
 import { Main } from './pages/main/main';
 import { Info } from './pages/information/info';
 import { Important } from './pages/important/important';
+import { Champion } from './pages/champion/champion';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route exact path='/main' element={<Main/>}></Route>
           <Route exact path='/info' element={<Info/>}></Route>
           <Route exact path='/important' element={<Important/>}></Route>
+          <Route exact path='/champion' element={<Champion/>}></Route>
         </Routes>
     </Router>   
   );

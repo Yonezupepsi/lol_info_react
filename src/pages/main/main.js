@@ -3,7 +3,7 @@ import { Card } from "../../components/card/card";
 import { StyledMain } from "./styled";
 
 export const Main = () => {
-  const data = [{
+  const data = [{// 메인에서 출력될 Card 컴포넌트의 데이터를 객체배열로 작성.
     src: "https://www.kukinews.com/data/kuk/image/2020/11/26/kuk202011260451.680x.0.jpg",
     styleW: "425px",
     styleH: "500px",
@@ -15,8 +15,8 @@ export const Main = () => {
     src: "https://blog.kakaocdn.net/dn/FuTCH/btq7myEbbE0/elNihBKTZvNndnJgajbOz1/img.png",
     styleW: "425px",
     styleH: "500px",
-    alt: "League of Legends",
-    path: "/",
+    alt: "Your Legends",
+    path: "/Champion",
     text: "저장한 영웅들을 만나 보세요!"
   },
   {
@@ -25,7 +25,7 @@ export const Main = () => {
     styleH: "500px",
     alt: "League of Legends",
     path: "/important",
-    text: "저에게 돈을 주세요!"
+    text: "저에게 후원을 해주세요!"
   }
 
 ]
@@ -33,8 +33,8 @@ export const Main = () => {
   return (
     <>
       <StyledMain style={{backgroundColor: "#000000"}}>
-      {data.map((e, i) => (
-          <Card
+      {data.map((e, i) => (// 3개의 객체배열을 가진 data를 출력한다. 코드를 짧게 만들기 위해 map함수를 사용.
+          <Card // Card 컴포넌트에 props를 전달.
             key={i}
             src={e.src}
             styleW={e.styleW}
@@ -44,7 +44,8 @@ export const Main = () => {
             text={e.text}
           />
         ))}
-        {/* <Card
+        {/* 밑의 방식으로도 출력 할 수 있지만 코드가 길어진다. */}
+        {/* <Card 
             src={data[0].src}
             styleW={data[0].styleW}
             styleH={data[0].styleH}

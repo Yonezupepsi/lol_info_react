@@ -2,17 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, Text, Img } from "./styled";
 
-export const Card = (props) => {
-  console.log(props);
+export const Card = (props) => {// 메인에서 프롭스를 받아온다.
   return (
     <Img>
       <Container className="Card">
         <Link
           to={props.path}
-          style={{ color: "white", textDecoration: "none" }}
+          style={{ color: "white", textDecoration: "none" }}// Link를 사용하면 글자의 색과 밑줄이 생기기 때문에 인라인 스타일로 변경
         >
           <Img
-            style={{ width: props.styleW, height: props.styleH }}
+            style={{ width: props.styleW, height: props.styleH }}// 이미지 사이즈를 프롭스를 받아 지정.
             alt={props.alt}
             src={props.src}
           />
@@ -20,19 +19,5 @@ export const Card = (props) => {
         </Link>
       </Container>
     </Img>
-
-    // <Img>
-    // <Container>
-    //         <Link to="/info" style={{color: "white", textDecoration: "none"}}>
-
-    //             <img
-    //                 style={{ width: "440px", height: "500px" }}
-    //                 alt="League of Legends"
-    //                 src="src/components/cardinfo/cardinfo.js"
-    //         />
-    //             <Text>자신만의 챔피언을 찾아보세요!</Text>
-    //         </Link>
-    // </Container>
-    // </Img>
   );
 };
