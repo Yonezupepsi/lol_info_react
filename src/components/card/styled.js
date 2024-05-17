@@ -8,6 +8,7 @@ export const Container = styled.div`
 export const Text = styled.div`
   text-align: center;
   font-size: 20px;
+  margin: 5px;
 `;
 export const Img = styled.div`
   display: flex;

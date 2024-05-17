@@ -9,7 +9,6 @@ import {
   Container,
   InfoText,
 } from "./styled";
-import { Champion } from "../champion/champion";
 
 export const Info = () => {
   const [champions, setChampions] = useState(""); // 유즈스테이트를 이용해 api에서 필요한 정보들을 선언 후 저장하기 위해 작성.
@@ -30,7 +29,7 @@ export const Info = () => {
       getChampInfo();
     }
   }, [championId]);
-  const random = Math.floor(Math.random() * 165); // 챔피언의 배열을 랜덤으로 가져옴.
+  const random = Math.floor(Math.random() * 165); // 챔피언의 배열을 랜덤으로 가져 올 랜덤 함수. 소수점을 자르기 위해 floor를 사용.
 
   const apirequest = async () => {
     // api 연결
@@ -44,10 +43,6 @@ export const Info = () => {
         setChampions(championsArray.map((c) => c));
         setChampionId(champions[random].id);
         setChampionName(champions[random].name);
-        // if(response2.data.data[championId]){
-        //const [championImg, setChampionImg] = useState();
-        //localStorage.setItem("championName", response.data.data[championName].id);
-        //setChampionInfo(champions[random].title && champions[random].blurb && champions[random].);
         console.log(championName);
       } else {
         console.log(`데이터를 찾을 수 없습니다.`);
@@ -69,7 +64,7 @@ export const Info = () => {
       console.log(e);
     }
   };
-  if(championInfo){
+  if(championInfo){// championInfo가 true면 아래를 리턴
   return (
     <Container style={{backgroundColor: "#000000"}}>
       <Button onClick={apirequest}>Champion</Button>
@@ -77,7 +72,7 @@ export const Info = () => {
         <img
           src={`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${championId}_0.jpg`}
           alt={championName}
-          style={{ width: "500px", height: "500px", borderRadius: "15px" }}
+          style={{ width: "700px", height: "500px", borderRadius: "15px" }}
         />
         <InfoBox>
           <HorizontalBox>
@@ -94,7 +89,7 @@ export const Info = () => {
     </Container>
     
   );
-}else{
+}else{// 없으면 아래의 리턴을 출력
   return(
     <Container style={{backgroundColor: "#000000"}}>
       <Button onClick={apirequest}>Champion</Button>

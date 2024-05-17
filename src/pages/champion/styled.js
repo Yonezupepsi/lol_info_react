@@ -24,5 +24,5 @@ export const Button = styled.div`
     background-color: #FFFF00;
     color: black;
   }
-  margin: 30px 700px; /* 위아래는 30px, 좌우는 auto로 설정하여 가운데 정렬 */
+  margin: 30px 700px;
 `;
